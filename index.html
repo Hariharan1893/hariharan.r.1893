@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+
+    <title>Portfolio - Hariharan</title>
+    <link
+      rel="icon"
+      href="/images/head-logo-icon.ico"
+      class="rounded-full"
+      type="image/x-icon"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="overflow-x-hidden font-Ovo leading-8">
+    <!--navigation bar-->
+
+    <!-- gradient background-->
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
+      <img src="/images/header-bg-color.png" alt="" class="w-full" />
+    </div>
+
+    <!-- navigation bar light mode-->
+    <nav
+      class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-around z-50"
+    >
+      <a href="#top">
+        <img
+          src="/images/logo.png"
+          alt="Logo"
+          class="w-36 cursor-pointer mr-14"
+        />
+      </a>
+      <ul
+        class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50"
+      >
+        <li><a href="#top">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="flex items-center gap-4">
+        <a
+          href="#contact"
+          class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-7"
+          >Contact <img src="/images/arrow-icon.png" alt="" class="w-3"
+        /></a>
+
+        <!--toggle button for small size screens-->
+
+        <button class="block md:hidden ml-3" onclick="openMenu()">
+          <img src="/images/menu-black.png" alt="" class="w-6" />
+        </button>
+      </div>
+
+      <!-- small screen menus-->
+      <div>
+        <ul
+          id="sideMenu"
+          class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose transition duration-500"
+        >
+          <div class="absolute right-6 top-6" onclick="closeMenu()">
+            <img
+              src="/images/close-black.png"
+              class="w-5 cursor-pointer"
+              alt=""
+            />
+          </div>
+
+          <li><a href="#top" onclick="closeMenu()">Home</a></li>
+          <li><a href="#about" onclick="closeMenu()">About Me</a></li>
+          <li><a href="#services" onclick="closeMenu()">Services</a></li>
+          <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- hero page section-->
+
+    <div
+      class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4"
+    >
+      <img
+        src="/images/profile-img.png"
+        class="rounded-full w-32 lg:w-44"
+        alt=""
+      />
+      <h3 class="flex items-center gap-2 text-xl md:text-2xl mb-3">
+        Hi! I'm Hariharan R
+        <img
+          src="/images/hand-icon.png"
+          class="w-6 animate-rotate-in-45"
+          alt=""
+        />
+      </h3>
+      <h1 class="text-2xl sm:text-4xl lg:text-[33px]">
+        Tech-savvy || Java Developer || Freelancer
+      </h1>
+      <p class="max-w-2xl mx-auto">
+        Tech-savvy CSE student passionate about innovation, collaboration, and
+        making an impact through Java, SQL, and web technologies.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center mt-4 gap-4">
+        <a
+          href="#contact"
+          style="color: white"
+          class="px-10 py-3 border rounded-full bg-gradient-to-tr from-fromHover to-toHover text-wrap flex items-center gap-2"
+          >Contact Me
+          <img src="images/right-arrow-white.png" class="w-4" alt=""
+        /></a>
+        <a
+          href="/resume/HariharanResume.pdf"
+          download
+          class="px-10 py-3 border rounded-full border-gray-500 text-wrap flex items-center gap-2 bg-white"
+        >
+          My Resume <img src="images/download-icon.png" class="w-4" alt=""
+        /></a>
+      </div>
+    </div>
+
+    <!-- end of hero page-->
+
+    <!-- about me section-->
+
+    <div
+      id="about"
+      data-scroll
+      class="w-full px-[12%] py-10 scroll-mt-20 opacity-0 translate-y-12 transition-all duration-500"
+    >
+      <h2 class="text-center mt-4 text-5xl">About me</h2>
+      <!--overall container-->
+      <div
+        class="flex w-full flex-col lg:flex-row items-center gap-20 mt-4 my-20"
+      >
+        <!-- image left coloumn-->
+        <div class="max-w-max mx-auto relative">
+          <img
+            src="/images/user-image.JPG"
+            alt=""
+            class="w-64 sm:w-80 rounded-3xl max-w-none"
+          />
+        </div>
+
+        <!-- content right column-->
+        <div class="flex-1">
+          <p class="mb-10 max-w-2xl">
+            Tech-savvy student in Computer Science and Engineering. Proficient
+            in Java, SQL databases, and front-end web technologies. Eager to
+            explore opportunities and showcase my work through innovative
+            projects, collaborations, and contributions to the tech community.
+            Passionate about learning, growth, and making a meaningful impact in
+            this field.
+          </p>
+
+          <!-- cards section-->
+          <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+            <li
+              class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-[black]"
+            >
+              <img src="/images/code-icon.png" class="w-7 mt-3" alt="" />
+              <h3 class="my-4 font-semibold text-gray-700">Tech stacks</h3>
+              <p class="text-gray-600 text-sm">
+                Java, SpringBoot3, MySql, MongoDB, RestApi, HTML, CSS, UI/UX
+                design
+              </p>
+            </li>
+            <li
+              class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-[black]"
+            >
+              <img src="/images/edu-icon.png" class="w-7 mt-3" alt="" />
+              <h3 class="my-4 font-semibold text-gray-700">Education</h3>
+              <p class="text-gray-600 text-sm">
+                B.Tech - Computer Science And Engineering
+              </p>
+            </li>
+            <li
+              class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-[black]"
+            >
+              <img src="/images/project-icon.png" class="w-7 mt-3" alt="" />
+              <h3 class="my-4 font-semibold text-gray-700">Projects</h3>
+              <p class="text-gray-600 text-sm">
+                Do Visit github page
+                <a href="https://github.com/Hariharan1893 "
+                  ><img class="w-8 mt-2" src="images/github.png" alt=""
+                /></a>
+              </p>
+            </li>
+          </ul>
+
+          <h4 class="my-6 text-gray-700">Tools I Use</h4>
+
+          <!-- tools section-->
+          <ul class="flex items-center gap-3 sm:gap-5">
+            <li
+              class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500"
+            >
+              <img src="/images/eclipse.png" class="w-7 sm:w-7" alt="" />
+            </li>
+
+            <li
+              class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500"
+            >
+              <img src="/images/mongodb.png" class="w-7 sm:w-22" alt="" />
+            </li>
+
+            <li
+              class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500"
+            >
+              <img src="/images/postman.png" class="w-7 sm:w-22" alt="" />
+            </li>
+
+            <li
+              class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500"
+            >
+              <img src="/images/figma.png" class="w-7 sm:w-22" alt="" />
+            </li>
+
+            <li
+              class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500"
+            >
+              <img src="/images/git.png" class="w-7 sm:w-22" alt="" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- end of hero page-->
+
+    <!-- services section-->
+    <div
+      id="services"
+      data-scroll
+      class="w-full px-[12%] py-10 scroll-mt-20 opacity-0 translate-y-12 transition-all duration-500"
+    >
+      <h2 class="text-center text-5xl">My Services</h2>
+      <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
+        Offering expert website development, backend API solutions, and custom
+        Java-based services to bring your ideas to life.
+      </p>
+
+      <!-- cards-->
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 my-10">
+        <div
+          class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[black] cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500"
+        >
+          <img src="/images/web-icon.png" class="w-10" alt="" />
+          <h3 class="text-lg my-4 text-gray-700">Web Development</h3>
+          <p class="text-sm text-gray-600 leading-5">
+            Creating responsive, visually appealing, and user-friendly websites
+            tailored to your needs.
+          </p>
+          <a href="#contact" class="flex items-center gap-2 text-sm mt-5"
+            >For more
+            <img src="/images/right-arrow-bold.png" class="w-4" alt=""
+          /></a>
+        </div>
+
+        <div
+          class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[black] cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500"
+        >
+          <img src="/images/backend-icon.png" class="w-10" alt="" />
+          <h3 class="text-lg my-4 text-gray-700">Backend Development</h3>
+          <p class="text-sm text-gray-600 leading-5">
+            Developing robust, secure, and scalable backend solutions using
+            Spring Boot and REST APIs.
+          </p>
+          <a href="#contact" class="flex items-center gap-2 text-sm mt-5"
+            >For more
+            <img src="/images/right-arrow-bold.png" class="w-4" alt=""
+          /></a>
+        </div>
+
+        <div
+          class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[black] cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500"
+        >
+          <img src="/images/figma.png" class="w-10" alt="" />
+          <h3 class="text-lg my-4 text-gray-700">UI/UX Design</h3>
+          <p class="text-sm text-gray-600 leading-5">
+            Designing intuitive and visually engaging interfaces for seamless
+            user experiences.
+          </p>
+          <a href="#contact" class="flex items-center gap-2 text-sm mt-5"
+            >For more
+            <img src="/images/right-arrow-bold.png" class="w-4" alt=""
+          /></a>
+        </div>
+      </div>
+    </div>
+    <!-- end of services section-->
+
+    <!-- contact me page-->
+
+    <div
+      id="contact"
+      data-scroll
+      class="w-full px-[12%] py-10 scroll-mt-20 bg-[url('./images/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center opacity-0 translate-y-12 transition-all duration-500"
+    >
+      <h2 class="text-center text-5xl">Get in Touch</h2>
+      <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
+        Have a project in mind or need help with website development, backend
+        solutions, or Java services? Let’s connect and bring your ideas to
+        reality. I’d love to hear from you!
+      </p>
+
+      <form
+        action="https://api.web3forms.com/submit"
+        method="post"
+        class="max-w-2xl mx-auto"
+      >
+        <div class="grid grid-rows-1 lg:grid-cols-2 gap-6 mt-10 mb-8">
+          <input
+            type="hidden"
+            name="access_key"
+            value="457b2d6c-b24d-425c-adbe-b58504b04b34"
+          />
+
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            class="flex-1 p-3 outline-none borde-[0.5px] border-gray-400 rounded-md bg-white"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            class="flex-1 p-3 outline-none borde-[0.5px] border-gray-400 rounded-md bg-white"
+            required
+          />
+        </div>
+        <textarea
+          rows="6"
+          name="message"
+          placeholder="Enter your message"
+          class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6"
+          required
+        ></textarea>
+
+        <button
+          style="color: white"
+          class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-buttonBase text-white rounded-full mx-auto hover:bg-buttonHover duration-500"
+        >
+          Submit now
+          <img src="images/right-arrow-white.png" class="w-4" alt="" />
+        </button>
+      </form>
+    </div>
+
+    <!-- end of contact me page-->
+
+    <!-- footer page-->
+
+    <div class="mt-20">
+      <div class="text-center">
+        <img src="images/logo.png" class="w-36 mx-auto mb-2" alt="" />
+        <div class="w-max flex items-center gap-2 mx-auto">
+          <img src="images/mail_icon.png" class="w-6" alt="" />
+          hariramesh1893@gmail.com
+        </div>
+      </div>
+      <div
+        class="text-center sm:flex items-center justify-center border-t border-gray-400 mx-[10%] mt-6 py-6"
+      >
+        <p>
+          © 2024 Hariharan R. All rights reserved. Built with passion and code.
+        </p>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
